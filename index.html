@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <h2>Local Storage</h2>
+
+    <legend>Insert date</legend>
+
+    <input type="text" id="inpKey" placeholder="key" />
+    <input type="text" id="inpValue" placeholder="value" />
+    <button type="button" id="insertDate"></button>
+    <fieldset>
+      <legend>
+        Local stored date
+      </legend>
+      <div id="output"></div>
+    </fieldset>
+    <script type="text/javascript">
+      const key = document.getElementById("inpKey");
+      const value = document.getElementById("inValue");
+      const btn = document.getElementById("insertDate");
+      const output = document.getElementById("output");
+
+      btn.onclick = function() {
+        const key1 = key.value;
+        const val1 = value.value;
+        console.log(key1);
+        console.log(key2);
+        if (key1 && val1){
+          localStorage.setItem(key1, val1);
+          location.reload();
+          
+        }
+      };
+    </script>
+  </body>
+</html>
